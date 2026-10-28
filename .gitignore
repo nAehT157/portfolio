@@ -1,0 +1,14 @@
+# Hệ điều hành và IDE
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+
+# Công cụ và phụ thuộc
+node_modules/
+*.log
+
+# Biến môi trường và khóa bí mật
+.env
+.env.*
