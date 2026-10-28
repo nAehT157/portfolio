@@ -1,0 +1,239 @@
+/* Nội dung từng section và bố cục hai cột */
+
+/* Giới thiệu */
+.about {
+  display: grid;
+  gap: clamp(2rem, 5vw, 3.5rem);
+}
+
+.about__text {
+  display: grid;
+  gap: 1rem;
+  color: var(--muted);
+}
+
+.facts {
+  display: grid;
+  gap: 0.9rem;
+  align-content: start;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.facts__item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.facts__item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.facts dt {
+  color: var(--muted);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.facts dd {
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-align: right;
+}
+
+/* Kỹ năng */
+.skills {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.skill-group {
+  padding: 1.4rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.skill-group h3 {
+  margin-bottom: 0.9rem;
+  font-size: 1rem;
+}
+
+/* Dự án */
+.projects {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+}
+
+.project-card__media {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  border-bottom: 1px solid var(--border);
+  background:
+    radial-gradient(18rem 12rem at 20% 15%, var(--hero-glow), transparent 70%),
+    linear-gradient(145deg, var(--surface-hover), var(--bg-soft));
+  color: var(--border-strong);
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.project-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1.3rem;
+}
+
+.project-card h3 {
+  font-size: 1.08rem;
+}
+
+.project-card p {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* Liên hệ */
+.section--contact {
+  padding-top: 0;
+}
+
+.contact {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius-lg) + 0.25rem);
+  background: linear-gradient(180deg, var(--surface), var(--bg-soft));
+}
+
+.contact__lead {
+  margin-top: 0.8rem;
+  color: var(--muted);
+}
+
+.contact__list {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.contact__list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.contact__list a:hover {
+  border-color: var(--accent);
+  text-decoration: none;
+}
+
+.contact__label {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.contact__value {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-align: right;
+  word-break: break-all;
+}
+
+/* Chân trang */
+.site-footer {
+  padding-block: 1.5rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+}
+
+.site-footer a {
+  color: var(--muted);
+}
+
+.site-footer a:hover {
+  color: var(--text);
+}
+
+@media (min-width: 860px) {
+  .about {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .contact {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    align-items: center;
+  }
+}
+
+/* Nhãn công nghệ */
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.badge {
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-soft);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag-list li {
+  padding: 0.15rem 0.45rem;
+  border: 1px solid var(--border);
+  border-radius: 0.35rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
