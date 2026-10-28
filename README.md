@@ -2,7 +2,7 @@
 
 Trang giới thiệu bản thân một trang, viết bằng HTML, CSS và JavaScript thuần. Không framework, không bundler, không thư viện ngoài.
 
-- Trang công khai: https://nAehT157.github.io/portfolio/
+- Trang công khai: https://naeht157.github.io/portfolio/
 - Mã nguồn: https://github.com/nAehT157/portfolio
 
 ## Công nghệ
