@@ -1,0 +1,9 @@
+# Giữ xuống dòng LF cho mọi file văn bản để HTML, CSS, JS
+# hiển thị giống nhau trên Windows và khi deploy.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.pdf binary
