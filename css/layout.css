@@ -1,0 +1,231 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  border-bottom: 1px solid transparent;
+  background-color: var(--header-bg);
+  backdrop-filter: blur(14px);
+  transition: border-color var(--transition);
+}
+
+.site-header.is-scrolled {
+  border-bottom-color: var(--border);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: var(--header-height);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.brand:hover {
+  text-decoration: none;
+}
+
+.brand__mark {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.6rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: var(--accent-contrast);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.brand__text {
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.site-nav {
+  margin-left: auto;
+}
+
+.site-nav__list {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Phần mở đầu */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(3rem, 8vw, 5.5rem) clamp(4rem, 10vw, 7rem);
+}
+
+/* Hai vệt sáng mờ tạo chiều sâu cho phần đầu trang */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -15% -10% auto;
+  height: 120%;
+  background:
+    radial-gradient(45rem 24rem at 12% 0%, var(--hero-glow), transparent 62%),
+    radial-gradient(34rem 20rem at 88% 18%, var(--hero-glow-soft), transparent 65%);
+  pointer-events: none;
+}
+
+.hero__inner {
+  position: relative;
+  display: grid;
+  align-items: center;
+  gap: clamp(2.5rem, 6vw, 4rem);
+}
+
+.hero__content {
+  max-width: 40rem;
+}
+
+.hero__greeting {
+  margin-bottom: 0.4rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.hero__title {
+  font-size: clamp(2.6rem, 7vw, 4.5rem);
+  letter-spacing: -0.035em;
+}
+
+.hero__role {
+  margin-top: 0.6rem;
+  color: var(--accent);
+  font-size: clamp(1.1rem, 2.4vw, 1.35rem);
+  font-weight: 600;
+}
+
+.hero__tagline {
+  max-width: 34rem;
+  margin-top: 1rem;
+  color: var(--muted);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+/* Tiêu đề từng section */
+.section__header {
+  max-width: 42rem;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.section__eyebrow {
+  margin-bottom: 0.6rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section__title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.section__lead {
+  margin-top: 0.9rem;
+  color: var(--muted);
+}
+
+@media (min-width: 900px) {
+  .hero__inner {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  }
+}
+
+@media (max-width: 820px) {
+  .site-header__inner {
+    flex-wrap: wrap;
+    row-gap: 0.25rem;
+    padding-block: 0.5rem;
+  }
+
+  .site-nav {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .site-header__actions {
+    margin-left: auto;
+  }
+
+  .site-nav__list {
+    flex-wrap: wrap;
+    margin-left: -0.4rem;
+  }
+
+  /* Khi có JavaScript, menu chuyển thành bảng trượt dưới header */
+  .js .site-nav {
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    left: 0;
+    z-index: 50;
+    display: grid;
+    gap: 0.15rem;
+    padding: 0.8rem clamp(1.25rem, 5vw, 2rem) 1.2rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-soft);
+    box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-0.5rem);
+    transition: opacity 160ms ease, transform 160ms ease, visibility 160ms;
+  }
+
+  .js .site-nav.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .js .site-nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.1rem;
+    margin-left: 0;
+  }
+
+  .js .nav-link {
+    display: block;
+    padding: 0.6rem 0.7rem;
+    font-size: 1rem;
+  }
+
+  .js .nav-link[aria-current]::after {
+    display: none;
+  }
+
+  .js .nav-link[aria-current] {
+    background: var(--surface);
+  }
+
+  .js .menu-toggle {
+    display: inline-flex;
+  }
+}
