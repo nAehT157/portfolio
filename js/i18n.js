@@ -12,8 +12,8 @@
 
   /* Nhãn của nút chuyển ngữ: hiển thị ngôn ngữ sẽ chuyển tới */
   const TOGGLE_LABELS = {
-    vi: { text: "EN", ariaLabel: "Chuyển sang tiếng Anh" },
-    en: { text: "VI", ariaLabel: "Switch to Vietnamese" }
+    vi: { text: "EN", ariaLabel: "EN – Chuyển sang tiếng Anh" },
+    en: { text: "VI", ariaLabel: "VI – Switch to Vietnamese" }
   };
 
   const ATTRIBUTE_KEYS = {
@@ -27,7 +27,6 @@
       "meta.description": "Portfolio of Nguyen Van A, a third-year student at HCMUTE learning full-stack web development with Java, React and SQL.",
 
       "a11y.skip": "Skip to content",
-      "a11y.brand": "Back to top",
       "a11y.theme": "Toggle light and dark theme",
       "a11y.newTab": "(opens in a new tab)",
 
