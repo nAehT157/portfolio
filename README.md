@@ -46,7 +46,7 @@ Quy ước chi tiết nằm trong `CONTEXT.md`.
 
 Tìm và thay trong `index.html`:
 
-- `Nguyễn Văn A` — tên hiển thị ở logo, hero, footer, thẻ `title`, `meta author`.
+- `Nguyễn Văn A` — tên hiển thị ở logo, hero, footer, thẻ `title` và thẻ Open Graph.
 - `NA` — chữ viết tắt trong logo và khung ảnh đại diện.
 - `24110157@student.hcmute.edu.vn` — email ở phần giới thiệu và liên hệ.
 - `https://github.com/nAehT157` — link GitHub ở cả ba project và phần liên hệ.
