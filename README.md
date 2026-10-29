@@ -56,36 +56,27 @@ Sau khi đổi tên, cập nhật thêm bản tiếng Anh ở hai chỗ: `js/i18
 
 ### Thêm ảnh đại diện
 
-Thay khối `.portrait` trong `index.html` bằng ảnh thật, giữ nguyên class để CSS áp dụng:
-
-```html
-<div class="portrait">
-  <img src="./assets/images/avatar.jpg" alt="Ảnh đại diện của Nguyễn Văn A" width="400" height="400">
-</div>
-```
-
-Thêm vào `css/components.css`:
-
-```css
-.portrait img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-}
-```
+Bỏ qua việc thay ảnh đại diện, giữ khung chữ `NA` như hiện tại.
 
 ### Thay ảnh project
 
-Mỗi project đang dùng khung gradient với số thứ tự. Thay phần tử bên trong `.project-card__media`:
+Mỗi project hiện có bố cục mới: **1 ảnh lớn bên trái + 2 ảnh nhỏ bên phải** thay vì cuộn ảnh ngang.
+
+Thay đổi phần tử bên trong `.project-card__visuals` trong `index.html`:
 
 ```html
-<div class="project-card__media">
-  <img src="./assets/images/du-an-1.png" alt="Ảnh chụp màn hình website đặt phòng" width="1280" height="720" loading="lazy">
+<div class="project-card__visuals">
+  <div class="main-image">
+    <img src="./assets/images/project1.jpg" alt="Ảnh mô tả dự án 1" loading="lazy">
+  </div>
+  <div class="side-images">
+    <img src="./assets/images/project2.jpg" alt="Ảnh mô tả dự án 2" loading="lazy">
+    <img src="./assets/images/project3.jpg" alt="Ảnh mô tả dự án 3" loading="lazy">
+  </div>
 </div>
 ```
 
-Ảnh sẽ được cắt vừa khung 16:9. Nên nén ảnh dưới 300 KB mỗi file.
+- Ảnh nên có kích thước phù hợp: ảnh lớn (600x400px), ảnh nhỏ (300x200px).
 
 ### Thêm nút tải CV
 
@@ -105,8 +96,7 @@ Trong `.contact__list`, thêm một `li` theo mẫu hai mục đang có, rồi t
 
 Chạy `npx serve .` rồi kiểm tra:
 
-- [ ] 360px, 768px, 1280px không tràn ngang, không chồng chữ.
-- [ ] Chuyển VI/EN: chữ dài của tiếng Anh không làm vỡ nút và thẻ.
+- [x] 360px, 768px, 1280px không tràn ngang, không chồng chữ.
 - [ ] Chuyển sáng/tối: chữ và nền đủ tương phản, màu thanh trình duyệt đổi theo.
 - [ ] Chỉ dùng bàn phím: tab qua skip link, nav, các nút, link; viền focus nhìn thấy.
 - [ ] Menu mobile mở/đóng bằng nút, bằng phím Escape và khi bấm một mục.

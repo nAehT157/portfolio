@@ -64,7 +64,8 @@ assets/images/        avatar và ảnh project (chưa có ảnh thật)
 - [ ] Ảnh đại diện thật (đã quyết định bỏ qua/giữ khung NA).
 - [ ] **Ba dự án:**
   - Tên dự án, giới thiệu chi tiết và công nghệ sử dụng.
-  - Thay đổi cách trình bày: **3 ảnh mô tả dàn ngang (cuộn trái phải)** thay vì khung số.
+  - **Cập nhật bố cục:** 1 ảnh lớn bên trái + 2 ảnh nhỏ bên phải (không cuộn).
+  - Thay ảnh thật cho dự án.
   - Link repo/demo thật.
 - [ ] File `assets/cv.pdf` và nút tải CV (chưa có).
 - [ ] Trường, vị trí, năm học (cần cập nhật theo thông tin thực).
