@@ -70,38 +70,31 @@
 /* Dự án */
 .projects {
   display: grid;
-  gap: 1.25rem;
-  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 3rem;
 }
 
 .project-card {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  background: var(--surface);
-  margin-bottom: 2rem;
+  gap: 1rem;
 }
 
 .project-card__title {
-  padding: 1rem;
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   margin: 0;
 }
 
 .project-card__description {
-  padding: 0 1rem 1rem;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 1.1rem;
+  max-width: 40rem;
 }
 
 .project-card__tech {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  padding: 0 1rem 1rem;
+  margin-top: 0.5rem;
 }
 
 .project-card__tech .badge {
@@ -111,62 +104,34 @@
   background: var(--bg-soft);
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 
-.project-images {
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 0 1rem;
-  white-space: nowrap;
-  background: var(--bg-soft);
-}
-
-.image-scroll {
-  display: inline-flex;
+.project-card__visuals {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   gap: 1rem;
-  padding: 0.5rem 0;
+  margin-top: 1.5rem;
 }
 
-.image-scroll img {
-  width: 300px;
-  height: 200px;
+.main-image img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 0.5rem;
-  flex-shrink: 0;
 }
 
-.project-card__body {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-  padding: 1.3rem;
+.side-images {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
 }
 
-.project-card h3 {
-  font-size: 1.08rem;
-}
-
-.project-card p {
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
-.project-card__body {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  gap: 0.8rem;
-  padding: 1.3rem;
-}
-
-.project-card h3 {
-  font-size: 1.08rem;
-}
-
-.project-card p {
-  color: var(--muted);
-  font-size: 0.92rem;
+.side-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
 }
 
 /* Liên hệ */
@@ -258,36 +223,4 @@
     grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
     align-items: center;
   }
-}
-
-/* Nhãn công nghệ */
-.badge-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-}
-
-.badge {
-  padding: 0.25rem 0.6rem;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--bg-soft);
-  color: var(--muted);
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-}
-
-.tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.tag-list li {
-  padding: 0.15rem 0.45rem;
-  border: 1px solid var(--border);
-  border-radius: 0.35rem;
-  color: var(--muted);
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
 }
