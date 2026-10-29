@@ -146,12 +146,43 @@
     });
   }
 
+  function setupImageScroll() {
+    document.querySelectorAll(".image-scroll").forEach(function (container) {
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      container.addEventListener("mousedown", function (e) {
+        isDown = true;
+        startX = e.pageX - container.offsetLeft;
+        scrollLeft = container.scrollLeft;
+      });
+
+      container.addEventListener("mouseleave", function () {
+        isDown = false;
+      });
+
+      container.addEventListener("mouseup", function () {
+        isDown = false;
+      });
+
+      container.addEventListener("mousemove", function (e) {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - container.offsetLeft;
+        const walk = (x - startX) * 2;
+        container.scrollLeft = scrollLeft - walk;
+      });
+    });
+  }
+
   function init() {
     setupMobileNav();
     setupHeaderState();
     setupActiveSection();
     setupReveal();
     setupYear();
+    setupImageScroll();
   }
 
   if (document.readyState === "loading") {

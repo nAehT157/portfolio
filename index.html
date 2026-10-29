@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a0c10">
 
-  <title data-i18n="meta.title">Nguyễn Văn A — Full-stack Developer</title>
-  <meta name="description" content="Portfolio của Nguyễn Văn A, sinh viên năm 3 tại HCMUTE, đang học phát triển web full-stack với Java, React và SQL." data-i18n-content="meta.description">
+  <title>Nguyễn Thế Ân — Full-stack Developer</title>
+  <meta name="description" content="Portfolio của Nguyễn Thế Ân, sinh viên tại HCMUTE, đang học phát triển web full-stack với Java, React và SQL.">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Nguyễn Văn A — Full-stack Developer" data-i18n-content="meta.title">
-  <meta property="og:description" content="Portfolio của Nguyễn Văn A, sinh viên năm 3 tại HCMUTE, đang học phát triển web full-stack với Java, React và SQL." data-i18n-content="meta.description">
+  <meta property="og:title" content="Nguyễn Thế Ân — Full-stack Developer">
+  <meta property="og:description" content="Portfolio của Nguyễn Thế Ân, sinh viên tại HCMUTE, đang học phát triển web full-stack với Java, React và SQL.">
 
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./css/base.css">
@@ -30,7 +30,7 @@
     <div class="container site-header__inner">
       <a class="brand" href="#top">
         <span class="brand__mark" aria-hidden="true">NA</span>
-        <span class="brand__text">Nguyễn Văn A</span>
+        <span class="brand__text">Nguyễn Thế Ân</span>
       </a>
 
       <nav class="site-nav" id="site-nav" aria-label="Điều hướng chính" data-i18n-aria-label="nav.label">
@@ -43,9 +43,6 @@
       </nav>
 
       <div class="site-header__actions">
-        <button class="icon-button lang-toggle" type="button" data-lang-toggle hidden
-          aria-label="Chuyển sang tiếng Anh">EN</button>
-
         <button class="icon-button theme-toggle" type="button" data-theme-toggle hidden
           aria-label="Đổi giao diện sáng/tối" data-i18n-aria-label="a11y.theme">
           <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none"
@@ -78,7 +75,7 @@
             <span data-i18n="hero.status">Đang tìm cơ hội thực tập</span>
           </p>
           <p class="hero__greeting" data-i18n="hero.greeting">Xin chào, tôi là</p>
-          <h1 class="hero__title" id="hero-title">Nguyễn Văn A</h1>
+          <h1 class="hero__title" id="hero-title">Nguyễn Thế Ân</h1>
           <p class="hero__role">Full-stack Developer</p>
           <p class="hero__tagline" data-i18n="hero.tagline">Sinh viên năm 3 tại HCMUTE, đang học cách xây dựng sản phẩm web từ giao diện đến cơ sở dữ liệu.</p>
           <div class="hero__actions">
@@ -111,11 +108,11 @@
 
         <div class="about">
           <div class="about__text reveal">
-            <p data-i18n="about.p1">Mình là sinh viên năm 3 tại HCMUTE, hiện tập trung vào phát triển web full-stack. Mình thích đi từ thiết kế cơ sở dữ liệu, viết backend đến hoàn thiện giao diện.</p>
+            <p data-i18n="about.p1">Mình là sinh viên tại HCMUTE, hiện tập trung vào phát triển web full-stack. Mình thích đi từ thiết kế cơ sở dữ liệu, viết backend đến hoàn thiện giao diện.</p>
             <p data-i18n="about.p2">Mình đã dùng Java Servlet/JSP, JDBC và MySQL trong các đồ án môn học, và đang học thêm React, TypeScript cùng PostgreSQL.</p>
             <p data-i18n="about.p3">Mục tiêu gần nhất của mình là một kỳ thực tập để được làm việc trên sản phẩm thật, học quy trình làm việc nhóm và viết code có kiểm thử.</p>
             <p>
-              <a class="text-link" href="mailto:24110157@student.hcmute.edu.vn" data-i18n="about.cta">Gửi email cho mình</a>
+              <a class="text-link" href="mailto:nguyentheanprivate1105@gmail.com" data-i18n="about.cta">Gửi email cho mình</a>
             </p>
           </div>
 
@@ -202,57 +199,69 @@
 
         <div class="projects">
           <article class="project-card reveal">
-            <div class="project-card__media" aria-hidden="true"><span>01</span></div>
-            <div class="project-card__body">
-              <h3 data-i18n="projects.p1Title">Website đặt phòng khách sạn</h3>
-              <p data-i18n="projects.p1Desc">Đồ án môn học: tìm phòng, đặt phòng và quản lý đơn đặt phòng. Backend dùng Servlet/JSP, dữ liệu lưu trong MySQL.</p>
-              <ul class="tag-list">
-                <li>Java</li>
-                <li>Servlet / JSP</li>
-                <li>MySQL</li>
+            <h3 class="project-card__title">Website đặt phòng khách sạn</h3>
+            <div class="project-card__description">
+              <p>Đồ án môn học: tìm phòng, đặt phòng và quản lý đơn đặt phòng. Backend dùng Servlet/JSP, dữ liệu lưu trong MySQL.</p>
+              <ul class="project-card__tech">
+                <li class="badge">Java</li>
+                <li class="badge">Servlet / JSP</li>
+                <li class="badge">MySQL</li>
               </ul>
-              <a class="text-link text-link--arrow" href="https://github.com/nAehT157" target="_blank"
-                rel="noopener noreferrer">
-                <span data-i18n="projects.code">Xem trên GitHub</span>
-                <span class="sr-only" data-i18n="a11y.newTab">(mở trong tab mới)</span>
-              </a>
             </div>
+            <div class="project-images">
+              <div class="image-scroll">
+                <img src="./assets/images/project1.jpg" alt="Ảnh mô tả dự án 1" loading="lazy">
+                <img src="./assets/images/project2.jpg" alt="Ảnh mô tả dự án 2" loading="lazy">
+                <img src="./assets/images/project3.jpg" alt="Ảnh mô tả dự án 3" loading="lazy">
+              </div>
+            </div>
+            <a class="text-link" href="https://github.com/nAehT157" target="_blank" rel="noopener noreferrer">
+              Xem trên GitHub
+            </a>
           </article>
 
           <article class="project-card reveal">
-            <div class="project-card__media" aria-hidden="true"><span>02</span></div>
-            <div class="project-card__body">
-              <h3 data-i18n="projects.p2Title">Ứng dụng quản lý công việc</h3>
-              <p data-i18n="projects.p2Desc">Project tự học: tạo, sửa và lọc công việc theo trạng thái. Giao diện đang được hoàn thiện bằng React và TypeScript.</p>
-              <ul class="tag-list">
-                <li>React</li>
-                <li>TypeScript</li>
-                <li>Vite</li>
+            <h3 class="project-card__title">Ứng dụng quản lý công việc</h3>
+            <div class="project-card__description">
+              <p>Project tự học: tạo, sửa và lọc công việc theo trạng thái. Giao diện đang được hoàn thiện bằng React và TypeScript.</p>
+              <ul class="project-card__tech">
+                <li class="badge">React</li>
+                <li class="badge">TypeScript</li>
+                <li class="badge">Vite</li>
               </ul>
-              <a class="text-link text-link--arrow" href="https://github.com/nAehT157" target="_blank"
-                rel="noopener noreferrer">
-                <span data-i18n="projects.code">Xem trên GitHub</span>
-                <span class="sr-only" data-i18n="a11y.newTab">(mở trong tab mới)</span>
-              </a>
             </div>
+            <div class="project-images">
+              <div class="image-scroll">
+                <img src="./assets/images/project4.jpg" alt="Ảnh mô tả dự án 1" loading="lazy">
+                <img src="./assets/images/project5.jpg" alt="Ảnh mô tả dự án 2" loading="lazy">
+                <img src="./assets/images/project6.jpg" alt="Ảnh mô tả dự án 3" loading="lazy">
+              </div>
+            </div>
+            <a class="text-link" href="https://github.com/nAehT157" target="_blank" rel="noopener noreferrer">
+              Xem trên GitHub
+            </a>
           </article>
 
           <article class="project-card reveal">
-            <div class="project-card__media" aria-hidden="true"><span>03</span></div>
-            <div class="project-card__body">
-              <h3 data-i18n="projects.p3Title">Portfolio cá nhân</h3>
-              <p data-i18n="projects.p3Desc">Trang bạn đang xem: HTML, CSS và JavaScript thuần, không thư viện, có chuyển đổi sáng/tối và song ngữ Việt–Anh.</p>
-              <ul class="tag-list">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
+            <h3 class="project-card__title">Portfolio cá nhân</h3>
+            <div class="project-card__description">
+              <p>Trang bạn đang xem: HTML, CSS và JavaScript thuần, không thư viện, có chuyển đổi sáng/tối.</p>
+              <ul class="project-card__tech">
+                <li class="badge">HTML</li>
+                <li class="badge">CSS</li>
+                <li class="badge">JavaScript</li>
               </ul>
-              <a class="text-link text-link--arrow" href="https://github.com/nAehT157" target="_blank"
-                rel="noopener noreferrer">
-                <span data-i18n="projects.code">Xem trên GitHub</span>
-                <span class="sr-only" data-i18n="a11y.newTab">(mở trong tab mới)</span>
-              </a>
             </div>
+            <div class="project-images">
+              <div class="image-scroll">
+                <img src="./assets/images/project7.jpg" alt="Ảnh mô tả dự án 1" loading="lazy">
+                <img src="./assets/images/project8.jpg" alt="Ảnh mô tả dự án 2" loading="lazy">
+                <img src="./assets/images/project9.jpg" alt="Ảnh mô tả dự án 3" loading="lazy">
+              </div>
+            </div>
+            <a class="text-link" href="https://github.com/nAehT157" target="_blank" rel="noopener noreferrer">
+              Xem trên GitHub
+            </a>
           </article>
         </div>
       </div>
@@ -269,9 +278,9 @@
 
           <ul class="contact__list">
             <li>
-              <a href="mailto:24110157@student.hcmute.edu.vn">
+              <a href="mailto:nguyentheanprivate1105@gmail.com">
                 <span class="contact__label" data-i18n="contact.emailLabel">Email</span>
-                <span class="contact__value">24110157@student.hcmute.edu.vn</span>
+                <span class="contact__value">nguyentheanprivate1105@gmail.com</span>
               </a>
             </li>
             <li>
@@ -288,13 +297,13 @@
 
   <footer class="site-footer">
     <div class="container site-footer__inner">
-      <p>© <span data-current-year>2026</span> Nguyễn Văn A</p>
+      <p>© <span data-current-year>2026</span> Nguyễn Thế Ân</p>
       <p data-i18n="footer.note">Xây dựng bằng HTML, CSS và JavaScript thuần.</p>
       <a href="#top" data-i18n="footer.top">Lên đầu trang</a>
     </div>
   </footer>
 
-  <script src="./js/i18n.js" defer></script>
+  <!-- Loại bỏ i18n.js -->
   <script src="./js/main.js" defer></script>
 </body>
 </html>

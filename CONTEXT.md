@@ -40,16 +40,15 @@ assets/images/        avatar và ảnh project (chưa có ảnh thật)
 - JavaScript dùng IIFE + `"use strict"`, không tạo biến toàn cục, không dùng thư viện.
 - Breakpoint: `820px` cho menu mobile, `860px` cho bố cục about/contact, `900px` cho hero hai cột.
 
-## 5. Cơ chế song ngữ
+## 5. Tính năng đã loại bỏ
 
-- Tiếng Việt là bản gốc trong `index.html`. Chuỗi cần dịch gắn một trong ba thuộc tính:
-  - `data-i18n="key"` cho nội dung chữ;
-  - `data-i18n-aria-label="key"` cho `aria-label`;
-  - `data-i18n-content="key"` cho `content` của thẻ `meta`.
-- Bản tiếng Anh nằm trong `TRANSLATIONS.en` của `js/i18n.js`. Thêm chuỗi mới phải thêm ở cả hai nơi, nếu thiếu khóa thì trang giữ nguyên tiếng Việt.
-- Không đặt `data-i18n` lên phần tử có thẻ con, vì `textContent` sẽ xóa các thẻ đó.
-- Lựa chọn lưu ở `localStorage` khóa `portfolio-language`; thẻ `<html lang>` đổi theo.
-- Giới hạn đã biết: bản tiếng Anh render bằng JavaScript nên không được index như một trang riêng.
+- Tính năng song ngữ (Việt–Anh) đã được loại bỏ để tập trung vào việc tối ưu trình bày nội dung dự án và dễ dàng cập nhật sau này.
+
+## 6. Giao diện sáng/tối
+
+- Theme đặt bằng `data-theme="dark|light"` trên `<html>`, mặc định `dark`.
+- Màu khai báo bằng biến CSS; thêm component mới phải dùng biến, kiểm tra contrast ở cả hai theme.
+- Lựa chọn lưu ở `localStorage` khóa `portfolio-theme`; `js/theme.js` chạy trong `<head>` để tránh nháy màu.
 
 ## 6. Giao diện sáng/tối
 
@@ -59,14 +58,16 @@ assets/images/        avatar và ảnh project (chưa có ảnh thật)
 
 ## 7. Nội dung cần thay trước khi công khai
 
-- [ ] Tên hiển thị, chữ viết tắt logo/avatar (đang là "Nguyễn Văn A" / "NA").
-- [ ] Email liên hệ (đang dùng email sinh viên lấy từ `git config`).
+- [x] Tên hiển thị, chữ viết tắt logo/avatar.
+- [x] Email liên hệ.
 - [ ] Link GitHub, thêm LinkedIn nếu có.
-- [ ] Ảnh đại diện thật thay khung chữ "NA".
-- [ ] Ba project: tên, mô tả, công nghệ, link repo/demo thật.
-- [ ] Ảnh chụp project thay khung số 01/02/03.
-- [ ] File `assets/cv.pdf` và nút tải CV nếu muốn dùng.
-- [ ] Trường, vị trí, năm học đang là giả định từ email sinh viên.
+- [ ] Ảnh đại diện thật (đã quyết định bỏ qua/giữ khung NA).
+- [ ] **Ba dự án:**
+  - Tên dự án, giới thiệu chi tiết và công nghệ sử dụng.
+  - Thay đổi cách trình bày: **3 ảnh mô tả dàn ngang (cuộn trái phải)** thay vì khung số.
+  - Link repo/demo thật.
+- [ ] File `assets/cv.pdf` và nút tải CV (chưa có).
+- [ ] Trường, vị trí, năm học (cần cập nhật theo thông tin thực).
 
 ## 8. Kiểm tra và deploy
 
@@ -81,8 +82,33 @@ assets/images/        avatar và ảnh project (chưa có ảnh thật)
 - Commit tiếng Việt, dòng tiêu đề ≤ 50 ký tự, bắt đầu bằng động từ mệnh lệnh.
 - Phát hành gắn tag `v1.0.0`.
 
+## 10. Tài liệu hệ thống
+
+### 10.1 Product Requirements Document (PRD)
+- **Overview:** Portfolio SPA tối giản, tốc độ cao, tối ưu Accessibility.
+- **Goal:** Định vị thương hiệu cá nhân, hỗ trợ ứng tuyển.
+- **Features:** Hero, giới thiệu, kỹ năng, dự án, liên hệ, toggle Theme/Language, Mobile-friendly.
+
+### 10.2 Technical Requirements
+- **Stack:** HTML5, CSS3, Vanilla JS. Không CDN/Thư viện.
+- **Deployment:** GitHub Pages (main branch).
+- **Standards:** Lighthouse ≥ 95, BEM, tuân thủ `../context/coding-rules.md`.
+
+### 10.3 App Flow
+Luồng chính: Landing -> Nav (About/Skills/Projects/Contact) -> Action (Link/Toggle).
+
+### 10.4 Design Brief
+- **Colors:** Palette tối (mặc định) và sáng, quản lý bằng CSS Variables.
+- **Components:** Button, Card, Badge, Reveal animation (tắt khi reduce-motion).
+
+### 10.5 Implementation Plan
+- **Phase 1 (Done):** v1.0.x - Cấu trúc cơ bản.
+- **Phase 2 (Active):** v1.1 - Thay nội dung thực tế (ảnh, dự án, CV).
+- **Phase 3:** v1.2 - Tối ưu SEO, bổ sung Social link.
+
 ## Lịch sử
 
 | Ngày | Thay đổi |
 |---|---|
 | 28/10/2026 | Tạo file: chốt phạm vi, stack, quy ước song ngữ, theme và deploy |
+| 29/10/2026 | Bổ sung tài liệu hệ thống (PRD, Tech, Flow, Design, Plan) |
